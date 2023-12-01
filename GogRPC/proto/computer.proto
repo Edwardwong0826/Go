@@ -2,7 +2,9 @@ syntax = "proto3";
 
 package wong;
 
-option go_package = "GogRPC/proto;proto";
+// option go_package = "{out_path};out_go_package"; 
+// first parameter generated file destination path, second paramter generated file package name
+option go_package = "GogRPC/pb;proto";
 
 import "GogRPC/proto/component.proto";
 
@@ -24,7 +26,7 @@ import "GogRPC/proto/component.proto";
 // protoc --proto_path=proto proto/processor_message.proto --go_out=plugins=grpc:pb
 // protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:pb
 
-// protoc --proto_path=. --go_out=. ./GogRPC/proto/*.proto - refer to this, this the one works without problem, above useless
+// protoc --proto_path=. --go_out=. ./GogRPC/proto/*.proto - use this, this the one works without problem, cmd current path need to at C:\Git\Go, above useless
 
 // https://www.lixueduan.com/posts/protobuf/01-import/ - refer to this for how to import other proto files, and also how to define which path refer to generated grpc go file, how to config grpc go file package name
 

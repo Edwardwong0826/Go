@@ -2,8 +2,7 @@ syntax = "proto3";
 
 package wong;
 
-option go_package = "GogRPC/proto;proto";
-
+option go_package = "GogRPC/pb;proto";
 
 message Memory {
     enum Unit {
